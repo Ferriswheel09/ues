@@ -1,4 +1,3 @@
 main: 
-	g++ client.cpp -o client
-	./client 
-	rm -rf client 
+	g++ client_server.cpp -o program
+	rm -rf program
