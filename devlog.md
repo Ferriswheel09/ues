@@ -17,3 +17,6 @@ Overarching goals:
 - Tested to determine if the user entered server or client (needed standard library and string library)
 - Got a decent workflow of client and server from the main function (better to start earlier than later)
 ![image](https://github.com/user-attachments/assets/e602d008-b9d8-47b5-a435-a574c75e691e)
+
+## 4/8 
+- Got to work on implementing server side. Still debating on whether to use domain sockets or the regular IP sockets that are necessary. 
