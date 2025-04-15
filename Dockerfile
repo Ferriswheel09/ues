@@ -2,13 +2,13 @@ FROM gcc:13.2.0-bookworm AS build
 
 WORKDIR /src
 
-COPY ./helloworld.cpp /src/helloworld.cpp
+COPY ./client_server.cpp /src/client_server.cpp
 
 RUN set -xe; \
     g++ \
 	-Wall -Wextra \
 	-fPIC -pie \
-	-o /helloworld helloworld.cpp
+	-o /program client_server.cpp
 
 FROM scratch
 
@@ -21,4 +21,4 @@ COPY --from=build /lib64/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
 COPY --from=build /etc/ld.so.cache /etc/ld.so.cache
 
 # C++ HTTP server
-COPY --from=build /helloworld /helloworld
+COPY --from=build /program /program
