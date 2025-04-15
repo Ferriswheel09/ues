@@ -1,0 +1,6 @@
+[submodule "unikraft"]
+	path = unikraft
+	url = https://github.com/unikraft/unikraft
+[submodule "kraftkit"]
+	path = kraftkit
+	url = https://github.com/unikraft/kraftkit
