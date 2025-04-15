@@ -20,3 +20,8 @@ Overarching goals:
 
 ## 4/8 
 - Got to work on implementing server side. Still debating on whether to use domain sockets or the regular IP sockets that are necessary. 
+
+## 4/14
+- Initial simple client (may refactor as necessary) that can send messages to server
+- Refactored server to echo messages back to client (was initially typing messages back, but simpler for testing)
+- Implementation of using epoll, non blocking. Need to do more testing 
