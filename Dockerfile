@@ -8,7 +8,7 @@ RUN set -xe; \
     g++ \
 	-Wall -Wextra \
 	-fPIC -pie \
-	-o /program client_server.cpp
+	-o /client_server client_server.cpp
 
 FROM scratch
 
@@ -21,4 +21,4 @@ COPY --from=build /lib64/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
 COPY --from=build /etc/ld.so.cache /etc/ld.so.cache
 
 # C++ HTTP server
-COPY --from=build /program /program
+COPY --from=build /client_server /client_server

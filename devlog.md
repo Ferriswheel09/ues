@@ -24,4 +24,10 @@ Overarching goals:
 ## 4/14
 - Initial simple client (may refactor as necessary) that can send messages to server
 - Refactored server to echo messages back to client (was initially typing messages back, but simpler for testing)
-- Implementation of using epoll, non blocking. Need to do more testing 
+- Implementation of using epoll, non blocking. Need to do more testing
+
+## 4/19
+- Got a sample hello_world running when trying to build from source (no docker, no rootfs). 
+- Rewrote client and server into two distinct files
+    - Rewrote them in C since C++ was giving me a headache in Unikraft. 
+- Porting to Unikraft failed. It doesn't port forward, and networking is finicky at best, so compiling to ELF is safer bet than having to build unikernel from scratch. 

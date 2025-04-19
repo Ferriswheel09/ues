@@ -1,7 +1,7 @@
 spec: v0.6
-
 runtime: base:latest
-
+targets:
+  - architecture: x86_64
+    platform: qemu
 rootfs: ./Dockerfile
-
-cmd: ["/program", "server"]
+cmd: ["/client_server", "server"]
