@@ -4,6 +4,11 @@ program:
 server: program
 	./program server
 
+benchmark: 
+	g++ benchmark_client.cpp -o benchmark
+	./benchmark
+
+
 client: program 
 	./program client
 
