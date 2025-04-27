@@ -1,16 +1,13 @@
 program:
 	g++ client_server.cpp -o program
+	g++ benchmark_client.cpp -o benchmark
 
 server: program
 	./program server
-
-benchmark: 
-	g++ benchmark_client.cpp -o benchmark
-	./benchmark
-
 
 client: program 
 	./program client
 
 clean:
 	rm -rf ./program
+	rm -rf ./benchmark
